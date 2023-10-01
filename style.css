@@ -1,0 +1,112 @@
+/**
+Crear variables nativas de CSS aqui
+**/
+:root {
+  --bg-color-menu: #F98948;
+  --bg-color-product-button: #F9EA9A;
+  --color-product-button-text: #684E32;
+}
+
+html, body {
+  margin: 0;
+}
+
+.border {
+  border: 1px solid blue;
+}
+
+header {
+  
+}
+
+.header-navigation {
+  display: flex;
+  /** aqui usa una variable nativa de css, con el metodo var(AQUI NOMBRE DE VARIABLE) **/
+  background-color: var(--bg-color-menu);
+  padding: 10px 5px;
+}
+
+.logo {
+  /* display: inline-block; */
+}
+
+.menu {
+  /* display: inline-block; */
+  flex: 1;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.menu > li {
+  /* font-size: 0; */
+  /* border: 1px solid green; */
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.menu li > a {
+  padding: 10px;
+  display: block;
+  text-decoration: none;
+  color: white;
+}
+
+/* .menu > li:last-child {
+  margin-right: 0px;
+} */
+
+
+/** PRODUCT STYLES **/
+
+.product-container {
+  width: 250px;
+  padding: 10px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 10px 48px -14px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 10px 48px -14px rgba(0,0,0,0.75);
+  box-shadow: 0px 10px 48px -14px rgba(0,0,0,0.75);
+}
+
+.page-section {
+  margin: 20px 10px 0;
+}
+
+.product-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.product-actions-container {
+  /* padding: 10px 0px; */
+  display: flex;
+  justify-content: center;
+}
+
+.product-image-container {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+}
+
+.product-image {
+  /* border: 1px solid blue; */
+}
+
+.product-action-button {
+  padding: 10px;
+  display: block;
+  border-radius: 4px;
+  color: var(--color-product-button-text);
+  background-color: var(--bg-color-product-button);
+  text-decoration: none;
+  flex: 1;
+  text-align: center;
+}
+
+.product-action-button:first-child {
+  margin-right: 10px;
+}

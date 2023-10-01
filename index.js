@@ -1,39 +1,12 @@
-const blog = {
-  title: "",
-  description: "",
-};
+import { sayHello } from './src/home.js'
 
-function initForm(state) {
-  const stateProxy = new Proxy(state, {
-    set: (target, key, value) => {
-      target[key] = value;
-      const input = document.getElementById(key);
-      input.value = value;
-    }
-  });
-  // 0           1         2
-  // ["user", "password", "age"]
-  // user = 0 = ("user") => document.getElementById("user")
-  // password = 1 = ("password") => document.getElementById("password")
-  // age = 2 = ("age") => document.getElementById("age")
-  const inputs = Object.keys(state).map((id) => document.getElementById(id));
-  
-  inputs.forEach((input) => {
-    input.addEventListener('input', (event) => {
-      const currentValue = event.target.value;
-      const currentName = event.target.name;
-      stateProxy[currentName] = currentValue;
-    });
-  });
+// const blogState = initForm(blog);
 
-  return stateProxy;
-}
+// const form = document.getElementById('form');
 
-const blogState = initForm(blog);
+// function onSubmit(event) {
+//   event.preventDefault();
+//   console.log('enviare al servidor estos datos', blogState, event);
+// }
 
-const form = document.getElementById('form');
-
-function onSubmit(event) {
-  event.preventDefault();
-  console.log('enviare al servidor estos datos', blogState, event);
-}
+sayHello()

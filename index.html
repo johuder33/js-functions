@@ -4,20 +4,58 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Project</title>
-  <script defer src="./index.js"></script>
+  <script defer type="module" src="./index.js"></script>
+  <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
   <main>
-    <header>
-      <nav>
-        <ul>
-          <li>Home</li>
-          <li>Blog</li>
-          <li>Tienda</li>
+    <header class="header">
+      <nav class="header-navigation">
+        <div class="logo">
+          <a href="#">
+            <img src="https://cdn.icon-icons.com/icons2/836/PNG/512/Amazon_icon-icons.com_66787.png" width="40" height="40" />
+          </a>
+        </div>
+        <ul class="menu">
+          <li>
+            <a href="#">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Blog
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Tienda
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
 
+    <section class="page-section" id="home">
+      <ul class="product-list">
+        <li>
+          <div class="product-container">
+            <div class="product-image-container">
+              <img src="https://images.lider.cl/wmtcl?source=url[file:/productos/946485a.jpg]&scale=size[2000x2000]&sink" alt="" class="product-image" width="200" />
+            </div>
+            <div class="product-description-container">
+              <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto</p>
+            </div>
+            <div class="product-actions-container">
+              <a class="product-action-button" href="#">Add to cart</a>
+              <a class="product-action-button" href="#">See</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!--
     <section>
       <h1>Bienvenido a mi blog</h1>
       <form onsubmit="onSubmit(event)" id="form">
@@ -34,6 +72,7 @@
         </div>
       </form>
     </section>
+    -->
 
     <!-- <section>
       <div>
