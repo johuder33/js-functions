@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Product</title>
+  <script defer type="module" src="./index.js"></script>
+  <script defer type="module" src="./src/pages/newProduct.js"></script>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main>
+    <header class="header">
+      <nav class="header-navigation">
+        <div class="logo">
+          <a href="#">
+            <img src="https://cdn.icon-icons.com/icons2/836/PNG/512/Amazon_icon-icons.com_66787.png" width="40" height="40" />
+          </a>
+        </div>
+        <ul class="menu">
+          <li>
+            <a href="./index.html">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="./new_product.html">
+              Agregar producto
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Tienda
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    
+    <section>
+      <h1>Crear nuevo producto</h1>
+      <form onsubmit="onSubmit(event)" id="form">
+        <div>
+          <label>URL del producto</label>
+          <input name="product_url" id="product_url" type="text" />
+        </div>
+        <div>
+          <label>Descripcion del producto</label>
+          <textarea name="product_description" id="product_description" ></textarea>
+        </div>
+        <div>
+          <button type="button" id="save-button">Guardar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

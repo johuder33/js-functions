@@ -4,6 +4,7 @@ export function initForm(state) {
       target[key] = value;
       const input = document.getElementById(key);
       input.value = value;
+      return target[key]
     }
   });
   // 0           1         2

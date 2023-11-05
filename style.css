@@ -80,6 +80,15 @@ header {
   list-style: none;
 }
 
+.product-list > li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.product-list > li:first-child {
+  margin-left: 0px;
+}
+
 .product-actions-container {
   /* padding: 10px 0px; */
   display: flex;

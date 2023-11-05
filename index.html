@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Project</title>
   <script defer type="module" src="./index.js"></script>
+  <script defer type="module" src="./src/home.js"></script>
   <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
@@ -18,13 +19,13 @@
         </div>
         <ul class="menu">
           <li>
-            <a href="#">
+            <a href="./index.html">
               Home
             </a>
           </li>
           <li>
-            <a href="#">
-              Blog
+            <a href="./new_product.html">
+              Agregar producto
             </a>
           </li>
           <li>
@@ -37,23 +38,37 @@
     </header>
 
     <section class="page-section" id="home">
-      <ul class="product-list">
-        <li>
-          <div class="product-container">
-            <div class="product-image-container">
-              <img src="https://images.lider.cl/wmtcl?source=url[file:/productos/946485a.jpg]&scale=size[2000x2000]&sink" alt="" class="product-image" width="200" />
-            </div>
-            <div class="product-description-container">
-              <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto</p>
-            </div>
-            <div class="product-actions-container">
-              <a class="product-action-button" href="#">Add to cart</a>
-              <a class="product-action-button" href="#">See</a>
-            </div>
-          </div>
+      <ul class="product-list" id="product-list">
+        <!-- <li>
+          <product-element
+            data-product-description="Cerveza Torobayo 350 Cc"
+            data-product-image-url="https://images.lider.cl/wmtcl?source=url[file:/productos/946485a.jpg]&scale=size[2000x2000]&sink"
+          />
         </li>
+        <li>
+          <product-element
+            data-product-description="Pack Cerveza Calafate (10 Un De 350 Cc C/U), 10 Un"
+            data-product-image-url="https://images.lider.cl/wmtcl?source=url[file:/productos/4538981a.jpg]&scale=size[2000x2000]&sink"
+          />
+        </li> -->
       </ul>
+
     </section>
+
+    <template id="product-template">
+      <div class="product-container">
+        <div class="product-image-container">
+          <img id="product-image" alt="" class="product-image" width="200" />
+        </div>
+        <div class="product-description-container">
+          <p id="product-description"></p>
+        </div>
+        <div class="product-actions-container">
+          <a class="product-action-button" href="#">Add to cart</a>
+          <a class="product-action-button" href="#">See</a>
+        </div>
+      </div>
+    </template>
 
     <!--
     <section>
